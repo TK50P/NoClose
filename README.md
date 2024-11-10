@@ -1,5 +1,6 @@
 # NoClose
 A Simple C++ Program to trigger Blue Screen of Death (BSoD) Easily.
+<br> ![](https://tk50piskool.shx.is/6R0BPcsAR.gif)
 
 # How to use
 Run NoClose or NoClose_NonNMF.exe **as admininistrator**. then close the console window. it will trigger BSoD.
