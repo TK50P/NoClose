@@ -10,7 +10,7 @@ Run `NoClose.exe` as administrator, then attempt to close the console window. It
 
 ## Requirements
 
-* **Windows Version:** *It supports Windows NT 4.0 as minimum!!!* Full compatibility with the entire Windows NT lineage (NT 4.0, 2000, XP, and up).
+* **Windows Version:** *It supports Windows NT 3.1 as minimum!!!* Full compatibility with the entire Windows NT lineage (NT 4.0, 2000, XP, and up).
 * **Dependencies:** None. The application is completely standalone and zero-dependency. No external tools like NotMyFault or Visual C++ Redistributable packages are required.
 
 ## For Building
