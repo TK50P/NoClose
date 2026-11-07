@@ -1,18 +1,23 @@
 # NoClose
-A Simple C++ Program to trigger Blue Screen of Death (BSoD) Easily.
 
-# How to use
+A simple C++ program to trigger a native Blue Screen of Death (BSOD) easily.
 
-Run NoClose or NoClose_NonNMF.exe as administrator, then close the console window. It will trigger a BSoD.
+## How to use
 
-# Requirements
+Run `NoClose.exe` as administrator, then attempt to close the console window. It will instantly trigger a native BSoD.
 
-- **NotMyFault** needs to be installed to `C:\Windows\Sysnative\NMF.exe`. (For NoClose.exe Only)
-- **Windows Version**: Windows XP and later are supported.
-- **Visual C++ 2010 Redistributable**: Required to run `NoClose.exe` and `NoClose_NonNMF.exe` on systems that don’t have Visual Studio 2010 installed. You can download the 2010 redistributable from the [Microsoft website](https://www.microsoft.com/en-us/download/details.aspx?id=26999).
-- I often Recommended to use abbodi1406's [VisualCppRedist AIO](https://github.com/abbodi1406/vcredist/releases/tag/v0.85.0).
+*Note: You can safely close the window without crashing by pressing the `T` + `Z` + `H` keys simultaneously.*
+
+## Requirements
+
+* **Windows Version:** *It supports Windows NT 4.0 as minimum!!!* Full compatibility with the entire Windows NT lineage (NT 4.0, 2000, XP, and up).
+* **Dependencies:** None. The application is completely standalone and zero-dependency. No external tools like NotMyFault or Visual C++ Redistributable packages are required.
 
 ## For Building
 
-- You need Visual Studio 2019 or later to build it. C++ compiler is required.
-- If you’re trying to add other stop codes, look for `{ 0xF4 }`. You can change this to include additional stop codes like `{ 0xF4, 0xEA }`.
+* You can use the **MSYS2 MinGW-w64 G++ (32-bit)** toolchain to compile the standalone binary.
+* Open the **MSYS2 MinGW x86** terminal, navigate to the folder containing your source file, and run:
+
+```bash
+g++ main.cpp -o NoClose.exe -static -static-libgcc -Wl,--subsystem,console:4.0 -luser32 -ladvapi32
+```
